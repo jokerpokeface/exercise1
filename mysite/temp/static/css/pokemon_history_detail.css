@@ -1,0 +1,165 @@
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 1000px;
+	background-color: #f6f6f6;
+	font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB",
+				 微软雅黑, "Microsoft YaHei", 微軟正黑體, "Microsoft JhengHei",
+				 AppleGothic, "WenQuanYi Micro Hei", STHeiti, Meiryo, Arial,sans-serif;
+}
+
+#main_content {
+	float: left;
+}
+
+#navigation {
+	width: 20%;
+	text-align: center;
+	font-size: 0.8em;
+	float: left;
+}
+
+#navigation img {
+	padding-top: 20px;
+	margin-bottom: 6px;
+}
+
+#navigation a {
+	display: block;
+	color: #1111ff;
+	margin-bottom: 2px;
+	cursor: pointer;
+}
+
+
+#navigation h4 {
+	margin-top: 7px;
+	margin-bottom: 3px;
+}
+
+#navigation a:link {
+	text-decoration: none;
+}
+
+#navigation a:visited {
+	text-decoration: none;
+}
+
+#navigation a:hover {
+	text-decoration: underline;
+}
+
+#navigation a:active {
+	text-decoration: underline;
+}
+
+
+
+#main {
+	width: 80%;
+	float: left;
+	background-color: white;
+	padding-top: 30px;
+}
+
+#main_left {
+	float: left;
+	width: 68%;
+	margin-left: 2%;
+}
+
+#main_left h1,h2,h3 {
+	margin: 0;
+	padding: 0;
+}
+
+#main_left h2 {
+	margin-top: 50px;
+}
+
+#main_left li {
+	list-style-type: disc;
+}
+
+span.big {
+	font-weight: bold;
+}
+
+span.specialWord {
+	font-size: 0.9em;
+	color: #ff1111;
+	margin-left: 2em;
+	font-style: italic;
+}
+
+div .special_div {
+	margin-bottom: 16px;
+}
+
+p.special_p {
+	margin-top: 8px;
+}
+
+#main_right {
+	float: left;
+	padding-top: 5px;
+	width: 30%;
+}
+
+.pic_title {
+	text-align: center;
+}
+
+.pic_title p{
+	margin: 0;
+	line-height: 1.1em;
+	font-size: 0.9em;
+}
+
+#main_right img {
+	display: block;
+	width: 80%;
+	margin: 10px 10%;
+}
+
+#main_right dl {
+	width: 80%;
+	margin: 40px 10%;
+	border: 3px blue solid;
+	background-color: #9db7f5;
+	border-radius: 13px;
+}
+
+#main_right dl dt {
+	font-weight: bold;
+	text-indent: 1em;
+	background-color: #6890f0;
+}
+
+#main_right dl dt:first-child {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#main_right dl dd{
+	font-size: 0.9em;
+	text-indent: 1em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	height: 20px;
+}
+
+#main_foot {
+	width: 80%;
+	float: left;
+	clear: both;
+	margin: 10px 0 0 20%;
+	color: #808080;
+}
+
+#foot {
+	float: left;
+	clear: both;
+	margin-top: 100px;
+	background-color: black;
+}

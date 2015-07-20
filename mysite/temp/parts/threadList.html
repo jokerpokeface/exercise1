@@ -1,0 +1,35 @@
+<table class='ui basic table compact'>
+    <thead>
+        <tr><th>标题</th><th>作者</th><th>浏览次数</th><th>发表时间</th></tr>
+    </thead>
+    <tbody>
+    	{% for thread in threadList %}
+    	    <tr>
+    	    	<td><a href='#' id='Tid{{thread.id}}' class='threadTitle'>{{thread.title}}</a></td>
+    	    	<td>{{thread.author.username}}</td><td>{{thread.readCount}}</td><td>{{thread.time|date:'Y-m-d h:m'}}</td>
+    	    </tr>
+    	{% empty %}
+    	    
+    	{% endfor %}
+    </tbody>
+</table>
+
+<script type="text/javascript" src="/static/javascript/jquery.js"></script>
+<script type="text/javascript" src="/static/javascript/semantic.min.js"></script>
+{% include 'include/djangoAjaxPost.html' %}
+<script>
+    $('.threadTitle').click(function(e) {
+        $('.ui.inverted.dimmer').addClass('active')
+        Tid = $(e.target).attr('id').substring(3, $(e.target).attr('id').length)
+        $.ajax({
+            url: '/threadDetail/',
+            type: 'post',
+            data: {Tid: Tid},
+            success: function(data) {
+                $('.threadList').html(data)
+                $('.ui.inverted.dimmer').removeClass('active')
+            }
+        })
+
+    })
+</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf8">
+
+        <title>Search Page</title>
+
+        <link type="text/css" rel="stylesheet" href="/static/css/semantic.min.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/pokemon_detail.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/pokemon_search.css">
+
+
+    </head>
+    <body>
+
+    	<div class="main_content">
+    		<!--顶部的导航栏-->
+    		{% include 'include/nav.html' %}
+
+            <div class="main">
+            <!--二级搜索菜单-->
+    		{% include 'include/search_via.html' %}
+     
+    	    <form action='/detail' class="form ui right">
+    	    	<div class="field">
+                    <div class="appenddiv"><ul class="append"></ul></div>
+    	    		<div class="input ui icon">
+    	    			<input name='input_name' type="text" placeholder="请输入关键字">
+    	    			<i class="icon search"></i>
+    	    		</div>
+    	    	</div>
+                <button type="submit">搜索</button>
+    	    </form>
+            <!--clean both-->
+            <div class="clean"></div>
+            
+            <!--三级菜单，根据选择的搜索类型显示-->
+            <div>
+            {% include 'include/search_what.html' %}
+            </div>
+            <!-- -->
+
+            <!--分割线-->
+            <div class="divider ui horizontal middle"><i class="icon double angle down"></i></div>
+            <a href="#" class="unslider-arrow prev"><i class="icon circular large left arrow"></i></a>
+            <a href="#" class="unslider-arrow next"><i class="icon circular large right arrow"></i></a>
+            <div class="banner">
+                <ul>
+                    <!--轮播的图片，大小900 X 400-->
+                <li><img src="/static/images/play/searchpage0.jpg"></li>
+                <li><img src="/static/images/play/searchpage1.jpg"></li>
+                <li><img src="/static/images/play/searchpage2.jpg"></li>
+                <li><img src="/static/images/play/searchpage3.jpg"></li>
+                </ul>
+            </div>
+
+    	    </div>
+  
+    	</div>
+
+
+    	{% include 'include/sidebar.html' %}
+
+     
+
+    </body>
+
+    <script type="text/javascript" src="/static/javascript/jquery.js"></script>
+    {% include 'include/djangoAjaxPost.html' %}
+    <script type="text/javascript" src="/static/javascript/semantic.min.js"></script>
+    <script type="text/javascript" src="/static/javascript/pokemon_detail.js"></script>
+    <script type="text/javascript" src="/static/javascript/pokemon_search.js"></script>
+    <script type="text/javascript" src="/static/javascript/unslider.min.js"></script>
+    <script type="text/javascript" src="/static/javascript/ajax.js"></script>
+
+</html>

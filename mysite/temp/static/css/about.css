@@ -1,0 +1,17 @@
+.ui.stackable.items .item {
+	min-height: 300px;
+	width: 270px;
+}
+
+.ui.stackable.items.captain .item {
+	width: 350px;
+}
+
+div.ui.stackable.items.captain {
+	float: left;
+	width: 50%;
+}
+
+div.ui.stackable.items.members {
+	
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+
+        <link type="text/css" rel="stylesheet" href="/static/css/semantic.min.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/pokemon_detail.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/pokemon_history_detail.css">
+
+        <script type="text/javascript" src="/static/javascript/jquery.js"></script>
+        <script type="text/javascript" src="/static/javascript/semantic.min.js"></script>
+        <script type="text/javascript" src="/static/javascript/pokemon_detail.js"></script>
+        <script type="text/javascript" src="/static/javascript/pokemon_search.js"></script>
+        <script type="text/javascript" src="/static/javascript/unslider.min.js"></script>
+        <script type="text/javascript" src="/static/javascript/pokemon_history_detail.js"></script>
+        <script type="text/javascript" src="/static/javascript/pokemon_history_detail_object.js"></script>
+        {% include 'include/djangoAjaxPost.html' %}
+    </head>
+
+    <body>
+    	<!--顶部的导航栏-->
+    	{% include 'include/nav.html' %}
+
+    	<div class="main_content">
+			<div id="navigation">
+				<img src="/static/images/history/logo.png" />
+				<h4>第一世代</h4>
+				<a href="/historyDetail?version=1.1">红版 • 绿版 • 蓝版</a>
+				<a href="/historyDetail?version=1.2">皮卡丘版</a>
+				<h4>第二世代</h4>
+				<a href="/historyDetail?version=2.1">金版 • 银版</a>
+				<a href="/historyDetail?version=2.2">水晶版</a>
+				<h4>第三世代</h4>
+				<a href="/historyDetail?version=3.1">红宝石版 • 蓝宝石版</a>
+				<a href="/historyDetail?version=3.2">绿宝石版</a>
+				<a href="/historyDetail?version=3.3">火红版 • 叶绿版</a>
+				<h4>第四世代</h4>
+				<a href="/historyDetail?version=4.1">钻石版 • 珍珠版</a>
+				<a href="/historyDetail?version=4.2">白金版</a>
+				<a href="/historyDetail?version=4.3">心金版 • 魂银版</a>
+				<h4>第五世代</h4>
+				<a href="/historyDetail?version=5.1">黑版 • 白版</a>
+				<a href="/historyDetail?version=5.2">黑版2 • 白版2</a>
+				<h4>第六世代</h4>
+				<a href="/historyDetail?version=6.1">X版 • Y版</a>
+				<a href="/historyDetail?version=6.2">终极红宝石版 • 始源蓝宝石版</a>
+			</div>
+
+			<div id="main">
+				<div id="main_left">
+				</div>
+
+				<div id="main_right">
+				</div>
+			</div>
+
+			<div id="main_foot">
+					数据来源：神奇宝贝维基百科。
+			</div>
+
+            <div id="foot">
+				<img id="footImg" src="/static/home/zhujiao.jpg" title="foot" alt="foot" />
+			<div>
+    	</div>
+            
+            
+        
+        <!--sidebar-->
+        {% include 'include/sidebar.html' %}
+
+    </body>
+</html>

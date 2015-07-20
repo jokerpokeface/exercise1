@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf8">
+        
+        <title>Search List</title>
+
+        <link type="text/css" rel="stylesheet" href="/static/css/semantic.min.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/pokemon_detail.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/pokemon_list.css">
+
+    </head>
+    <body>
+
+    	<div class="main_content">
+    		<!--顶部的导航栏-->
+    		{% include 'include/nav.html' %}
+
+            <div class="main">
+            <!--二级搜索菜单-->
+    		{% include 'include/search_via.html' %}
+
+    	    <form action="/detail" class="form ui right">
+    	    	<div class="field">
+    	    		<div class="input ui icon">
+    	    			<input type="text" name='input_name' placeholder="请输入关键字">
+    	    			<i class="icon search link"></i>
+    	    		</div>
+    	    	</div>
+                <button type="submit">搜索</button>
+    	    </form>
+            <!--clean both-->
+            <div class="clean"></div>
+            
+            <!--三级菜单，根据选择的搜索类型显示-->
+            <div>
+            {% include 'include/search_what.html' %}
+            </div>
+            <!-- -->
+
+            <!--分割线-->
+            <div class="divider ui horizontal middle"><i class="icon double angle down"></i></div>
+            <div class="header ui">共{{length}}个搜索结果</div>
+            <table class="ui basic table">
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>姓名</th>
+                        <th>种类</th>
+                        <th>属性</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for pokemon in pokemons%}
+                    <tr>
+                        <td><a href="/detail?input_name={{pokemon.ch_name}}">{{pokemon.id}}</a></td>
+                        <td><a href="/detail?input_name={{pokemon.ch_name}}">{{pokemon.ch_name}}</a></td>
+                        <td><a href="/detail?input_name={{pokemon.ch_name}}">{{pokemon.type}}</a></td>
+                        <td><a href="/detail?input_name={{pokemon.ch_name}}">{{pokemon.property}}</a></td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+
+
+    	    </div>
+  
+    	</div>
+
+
+    	{% include 'include/sidebar.html' %}
+
+        <!--回到顶部-->
+        <div class="fix">
+            <a href="#"><i class="icon Angle up circular large"></i></a>
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="/static/javascript/jquery.js"></script>
+    {% include 'include/djangoAjaxPost.html' %}
+    <script type="text/javascript" src="/static/javascript/semantic.min.js"></script>
+    <script type="text/javascript" src="/static/javascript/pokemon_detail.js"></script>
+
+</html>

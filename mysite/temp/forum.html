@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf8">
+        
+        <title>Forum</title>
+
+        <link type="text/css" rel="stylesheet" href="/static/css/semantic.min.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/pokemon_detail.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/forum.css">
+
+    </head>
+    <body>
+
+    	<div class="main_content">
+    		<!--顶部的导航栏-->
+    		{% include 'include/nav.html' %}
+
+            <div class="main">
+            
+               
+            
+                <div class='ui tabular menu'>
+                    <a class='item active' id='AN'>公告</a>
+                    <a class='item' id='SH'>交流分享</a>
+                    <a class='item' id='GA'>游戏天地</a>
+                    <a class='item' id='CA'>吐槽</a>
+                </div>
+                <div>
+                    
+                </div>
+                <div class="ui icon input forumSearch">
+                    <div class='addButton'>
+                        <i class='icon add red link'></i>发帖
+                    </div>
+                    <input class='key thread' type="text" placeholder="搜索">
+                    <i class="search link icon thread"></i>
+                </div>
+                <div class='clean'></div>
+                <div class="ui inverted dimmer">
+                    <div class="ui text loader">让流量飞一会儿...</div>
+                </div>
+                <div class='threadList'>
+    		        {% include 'parts/threadList.html' %}
+                </div>
+
+                <div class='divider ui '></div>
+                <div class='copyright'>
+                    <p>本网站数据来自神奇宝贝百科</p>
+                </div>
+
+    	    </div>
+        </div>
+        
+
+    	{% include 'include/sidebar.html' %}
+    
+    <!-- 发表内容对话框 -->
+    <div class="ui modal">
+    <i class="close icon"></i>
+    <div class="header"><span class='activeTab'></span>--发帖</div>
+    <div class="content">
+        <div class='ui form'>
+            <div class='field'>
+                <input type='text' class='title' placeholder='请输入标题...(字数不大于100)'>
+            </div>
+            <div class='field'>
+                <textarea class='contentSubmit' placeholder='请输入内容...'></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui button">取消</div>
+        <div class="ui button submit">发表</div>
+    </div>
+    </div>
+    </body>
+    <script type="text/javascript" src="/static/javascript/jquery.js"></script>
+    {% include 'include/djangoAjaxPost.html' %}
+    <script type="text/javascript" src="/static/javascript/semantic.min.js"></script>
+    <script type="text/javascript" src="/static/javascript/pokemon_detail.js"></script>
+    <script type="text/javascript" src="/static/javascript/pokemon_forum.js"></script>
+</html>

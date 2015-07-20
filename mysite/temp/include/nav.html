@@ -1,0 +1,36 @@
+<div class="ui menu large forhead inverted red">
+    <div class="item">POKEMON！</div>
+    <a class="item" href="/">
+        <i class="home icon"></i>主页
+    </a>
+    <a class="item" href='/forum'>
+    	<i class="icon chat outline"></i>
+    	论坛
+    </a>
+    <a class="item" href="/about">
+        <i class="icon smile"></i>
+        关于我们
+    </a>
+    <a class="item" href="/search">
+        <i class="icon table"></i>
+        查询
+    </a>
+    <span class="change">
+    {% ifequal username '' %}			
+    <a class="right item login">
+    	<i class="icon sign in"></i>
+    	登录
+    </a>
+    <a class="right item register">
+    	<i class="add user basic icon"></i>
+    	注册
+    </a>
+    {% else %}
+    <a class="right item logout">
+        <i class="icon sign out"></i>
+        退出
+    </a>
+    <a class="item right" href="/userInfo">{{ username }}</a>
+    {% endifequal %}
+    </span>
+</div>

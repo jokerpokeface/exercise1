@@ -1,0 +1,10 @@
+.ui.table a, .fix a {
+	text-decoration: none;
+	color: black;
+}
+
+.fix {
+	position: fixed;
+	left: 5px;
+	bottom: 50px;
+}

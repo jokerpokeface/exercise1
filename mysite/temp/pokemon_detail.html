@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf8">
+
+        <title>Detail Page</title>
+
+        <link type="text/css" rel="stylesheet" href="/static/css/semantic.min.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/pokemon_detail.css">
+
+    </head>
+    <body>
+
+    	<div class="main_content">
+    		<!--顶部的导航栏-->
+    		{% include 'include/nav.html' %}
+
+            <div class="main">
+            <!--二级搜索菜单-->
+    		{% include 'include/search_via.html' %}
+            
+    	    <div class="form ui right indetail">
+    	    	<div class="field">
+    	    		<div class="input ui icon">
+    	    			<input type="text" placeholder="请输入关键字">
+    	    			<i class="icon search link"></i>
+    	    		</div>
+    	    	</div>
+                <button type="submit">搜索</button>
+    	    </div>
+            
+            <!--clean both-->
+            <div class="clean"></div>
+            
+            <!--三级菜单，根据选择的搜索类型显示-->
+            <div>
+            {% include 'include/search_what.html' %}
+            </div>
+            <!-- -->
+
+            <!--分割线-->
+            <div class="divider ui horizontal middle"><i class="icon double angle down"></i></div>
+
+            <div class="detail">
+            
+                    <div class="content more">
+                       <a href="http://wiki.52poke.com/wiki/{{pokemon.ch_name}}" target="_blank"><div class="header">GET MORE<i class="circle arrow right icon hidden large blue"></i></div></a>
+                    </div>
+            
+            <div class="tag1">
+            <div class="ui raised segment">
+                <div class="ui top attached blue label">名字
+                    &nbsp;&nbsp;&nbsp;&nbsp;#<span class="poke_id">{{pokemon.poke_id}}</span></div><br/>
+                    中文：<span class="ch_name">{{pokemon.ch_name}}</span><br/>
+                    日文：<span class="jp_name">{{pokemon.jp_name}}</span><br/>
+                    英文：<span class="en_name">{{pokemon.en_name}}</span>
+            </div>
+            <div class="ui raised segment">
+                <div class="ui top attached blue label">身高</div><br/><span class="height">{{pokemon.height}}</span>m
+            </div>
+            <div class="ui raised segment">
+                <div class="ui top attached blue label">体重</div><br/><span class="weight">{{pokemon.weight}}</span>kg
+            </div>
+            <div class="ui raised segment">
+                <div class="ui top attached blue label">种类</div><br/><span class="poke_type">{{pokemon.poke_type}}</span>
+            </div>
+            </div>
+
+            <div class="tagmiddle">
+
+              
+               <div class="ui raised segment">
+                    <div class="ui top attached blue label">性别比例</div><br/>
+                    <span class="male_left">雄性</span><span class="female_right">雌性</span>
+                    <div class="clean"></div>
+                    <div class="ui progress ration">
+                    <div class="bar" style="width:50%"><span class="male">{{pokemon.male}}</span></div>
+                    <span class="female">{{pokemon.female}}</span>
+                    </div>
+               </div>
+               <div class="ui raised segment">
+                    <div class="ui top attached blue label">捕获度</div><br/>
+                    <span class="catch">{{pokemon.catch}}%</span>
+               </div>
+               <div class="ui raised segment">
+                    <div class="ui top attached blue label">属性</div><br/>
+                    <span class="poke_property">{{pokemon.poke_property}}</span>
+               </div>
+               <div class="ui raised segment">
+                    <div class="ui top attached blue label">特性</div><br/>
+                    <span class="poke_class">{{pokemon.poke_class}}</span>
+               </div>
+            </div>
+
+            <div class="tag2">
+            
+            <div class="ui raised segment">
+                <div class="ui top attached blue label">种类值</div><br/>
+                <div class="value">HP</div>
+                <div class="ui successful progress hp">
+                    <div class="bar" style="width:0%"><span class="percent">{{pokemon.hp}}</span></div>
+                </div>
+                <div class="value">攻击</div>
+                <div class="ui successful progress attack">
+                    <div class="bar" style="width:0%"><span class="percent">{{pokemon.attack}}</span></div>
+                </div>
+                <div class="value">防御</div>
+                <div class="ui successful progress defence">
+                    <div class="bar" style="width:0%"><span class="percent">{{pokemon.defence}}</span></div>
+                </div>
+                <div class="value">特攻</div>
+                <div class="ui successful progress super_attack">
+                    <div class="bar" style="width:0%"><span class="percent">{{pokemon.super_attack}}</span></div>
+                </div>
+                <div class="value">特防</div>
+                <div class="ui successful progress super_defence">
+                    <div class="bar" style="width:0%"><span class="percent">{{pokemon.super_defence}}</span></div>
+                </div>
+                <div class="value">速度</div>
+                <div class="ui successful progress speed">
+                    <div class="bar" style="width:0%"><span class="percent">{{pokemon.speed}}</span></div>
+                </div>
+            </div>
+
+            </div>
+            <img class="pokemon_ball" src="/static/images/jinglingqiu1.jpg">
+            </div>
+
+    	    </div>
+  
+    	</div>
+
+    	{% include 'include/sidebar.html' %}
+
+    </body>
+
+    <script type="text/javascript" src="/static/javascript/jquery.js"></script>
+    {% include 'include/djangoAjaxPost.html' %}
+    <script type="text/javascript" src="/static/javascript/semantic.min.js"></script>
+    <script type="text/javascript" src="/static/javascript/pokemon_detail.js"></script>
+    
+</html>

@@ -1,0 +1,50 @@
+<span class='author'>作者:{{thread.author.username}}</span>
+<span class='time'>发表于: {{thread.time|date:'Y-m-d'}}</span>
+<span class='like'>赞：<span class='likeNum'>{{thread.likeCount}}</span></span>
+<span class='readCount'>阅读次数：{{thread.readCount}}</span>
+<div class='clean'></div>
+<h1 class='threadTitle' id='Tid{{thread.id}}'>{{thread.title}}<span><i class='icon like small link red' data-content="I like it！"></i></span></h1>
+
+<p>{{thread.content}}</p>
+
+<!-- 分割线 -->
+<div class="ui horizontal divider">评论</div>
+
+<!-- 评论 -->
+<div class='ui comments'>
+	{% for comment in comments %}
+	<div class='comment'>
+		<a class='avatar'>
+			<img src='/static/images/bg2.jpg'>
+		</a>
+		<div class='content'>
+			<a class='author'>{{comment.author.username}}</a>
+			<div class='metadata'>
+				<div class='data'>{{comment.time|date:'Y-m-d h:m:s'}}</div>
+			</div>
+			<div class='text'>{{comment.content}}</div>
+		</div>
+		
+	</div>
+	{% empty %}
+	快来抢沙发
+	{% endfor %}
+</div>
+
+<p>
+	我要评论：
+</p>
+<form class="ui reply form">
+      <div class="field">
+          <textarea class='commentContent'></textarea>
+      </div>
+      <div class="ui button teal submit labeled icon">
+          <i class="icon edit"></i> 添加评论
+      </div>
+ </form>
+
+<script type="text/javascript" src="/static/javascript/jquery.js"></script>
+{% include 'include/djangoAjaxPost.html' %}
+<script type="text/javascript" src="/static/javascript/semantic.min.js"></script>
+    
+<script src='/static/javascript/threadDetail.js'></script>

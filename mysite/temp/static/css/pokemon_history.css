@@ -1,0 +1,154 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB",
+				 微软雅黑, "Microsoft YaHei", 微軟正黑體, "Microsoft JhengHei",
+				 AppleGothic, "WenQuanYi Micro Hei", STHeiti, Meiryo, Arial,sans-serif;
+}
+
+#myMain {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 100px;
+	width: 75%;
+}
+
+#myMain_title {
+	overflow: hidden;
+	padding-right: 20px;
+	margin-bottom: 100px;
+}
+
+#myMain_title img {
+	float: left;
+	width: 300px;
+	height: 350px;
+	margin-right: 25px;
+}
+
+#myMain_title p {
+	text-indent: 1.5em;
+	line-height: 1.5em;
+}
+
+#myMain_title p a{
+	font-weight: 200;
+	font-size: 0.5em;
+	color: #808080;
+}
+
+.myMain_middle {
+	margin-bottom: 100px;
+}
+
+.showTable_div {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 4px;
+	width: 498px;
+	border: 1px solid #445e9c;
+	border-radius: 12px;
+	background-color: #445e9c;
+}
+
+#fourthTable {
+	width: 502px;
+}
+
+table {
+	border-collapse: separate;
+	font-size: 0.9em;
+	background-color: white;
+	border: 2px #9db7f5 solid;
+	border-radius: 12px;
+	border-spacing: 0px
+}
+
+td {
+	padding: 2px 40px;
+	border: 1px #9db7f5 solid;
+	text-align: center;
+}
+
+td:first-child {
+	text-align: right;
+	padding-right: 3px;
+	padding-left: 40px;
+}
+
+td a:link {
+	text-decoration: none;
+}
+
+td a:visited {
+	text-decoration: none;
+}
+
+td a:hover {
+	text-decoration: underline;
+}
+
+td a:active {
+	text-decoration: underline;
+}
+
+div.serie {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+div.serie img {
+	float: left;
+	margin-right: 15px;
+	margin-left: 55px;
+}
+
+div.serie h1 {
+	line-height: 5px;
+}
+
+div.serie hr {
+	text-align: left;
+	width: 700px;
+	margin-left: 0px;
+}
+
+td.onlyOneTd {
+	width: 494px;
+	padding: 0px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 3px 0px 3px 0px;
+}
+
+.左上 {
+	border-top-left-radius: 10px;
+}
+
+.左下 {
+	border-bottom-left-radius: 10px;
+}
+
+.右上 {
+	border-top-right-radius: 10px;
+}
+
+.右下 {
+	border-bottom-right-radius: 10px;
+}
+
+#thanks_Support {
+	color: #808080;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#thanks_Support p{
+	margin-top: 3px;
+	text-indent: 1.5em;
+}
+
+#zhujiao {
+	background-color: black;
+}

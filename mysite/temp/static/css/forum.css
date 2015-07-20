@@ -1,0 +1,55 @@
+body {
+	/*background: url('/static/images/bg1.jpg');*/
+}
+
+.ui.tabular.menu {
+	float: left;
+	width: 60%;
+}
+
+.forumSearch {
+	float: right;
+	width: 30%;
+}
+
+.addButton {
+	position: absolute;
+	bottom: 0;
+	right: 100%;
+	width: 30%;
+	font-size: 20px;
+}
+
+.ui.modal>.header{
+	padding: 24px 10px;
+}
+
+.ui.modal>.content{
+	padding: 10px;
+}
+
+.ui.modal>.actions{
+	padding: 24px 10px;
+}
+
+.readCount, .like {
+	float: right;
+	margin-left: 30px;
+}
+
+.icon.like {
+	float: none;
+	margin-left: 3em;
+}
+
+.author {
+	font-weight: bold;
+}
+
+.copyright p {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 0;
+	font-size: 0.6em;
+	color: grey;
+}
